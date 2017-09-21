@@ -16,6 +16,6 @@ System.config({
     '@angular/compiler': { main: 'bundles/compiler.umd.min.js' },
     '@angular/platform-browser': { main: 'bundles/platform-browser.umd.min.js' },
     '@angular/platform-browser-dynamic': { main: 'bundles/platform-browser-dynamic.umd.min.js' },
-    'app': { main: 'main', defaultExtension: 'ts' }
+    'sample': { main: 'main', defaultExtension: 'ts' }
   }
 });
