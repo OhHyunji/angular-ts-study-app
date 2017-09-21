@@ -8,6 +8,6 @@ export class AppComponent {
     name: string;
 
     constructor() {
-        this.name = 'azalea';
+        this.name = 'awesome';
     }
 }
