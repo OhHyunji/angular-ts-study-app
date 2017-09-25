@@ -1,0 +1,22 @@
+<!-- TODO: 각 컴포넌트들을 구현해야 한다. -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      search component
+    </div>
+    <div class="col-md-9">
+      <div class="row carousel-holder">
+        <div class="col-md-12">
+          carousel component
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let prod of products" class="col-sm-4 col-lg-4 col-md-4">
+          <auction-product-item [product]="prod"></auction-product-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+footer component
