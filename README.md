@@ -9,3 +9,5 @@
 - TypeScript
 - Angular2
 - yarn
+
+참고: [예제 Github](https://github.com/han41858/Angular-Development-with-TypeScript)
