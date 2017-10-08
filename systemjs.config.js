@@ -13,10 +13,10 @@ System.config({
     'rxjs': { main: 'Rx' },
     '@angular/core': { main: 'bundles/core.umd.min.js' },
     '@angular/common': { main: 'bundles/common.umd.min.js' },
-    '@angular/compiler': { main: 'bundles/compiler.umd.min.js' },
+    '@angular/compiler': { main: 'bundles/compiler.umd.js' },
     '@angular/platform-browser': { main: 'bundles/platform-browser.umd.min.js' },
     '@angular/platform-browser-dynamic': { main: 'bundles/platform-browser-dynamic.umd.min.js' },
-    'sample': { main: 'main', defaultExtension: 'ts' },
+    '@angular/router': { main : 'bundles/router.umd.min.js' },
     'app': {main: 'main', defaultExtension: 'ts'}
   }
 });
