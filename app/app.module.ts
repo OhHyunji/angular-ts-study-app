@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy }from '@angular/common';
 
-import { routing } from './app.routing';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home.component';
@@ -13,11 +13,31 @@ import { SellerDetailComponent } from './components/seller-detail.component';
 import { Error404Component } from './components/error404.component';
 import { ChatComponent } from './components/chat.component';
 
+import { LuxuryModule } from './components/luxury/luxury.module';
+
 import { LoginGuard } from './guards/login.guard';
 import { UnsavedChangesGuard } from './guards/unsaved_changes.guard';
 
+const routes : Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'chat', component: ChatComponent, outlet: 'aux' },
+  { path: 'product', component: ProductComponent },
+  {
+    path: 'product/:id', component: ProductDetailComponent,
+    data: [ { isProd: true } ],
+    canActivate: [ LoginGuard ],
+    canDeactivate: [ UnsavedChangesGuard ],
+    children: [
+      { path: '', component: ProductDescriptionComponent },
+      { path: 'seller/:id', component: SellerDetailComponent }
+    ]
+  },
+  { path: '**', component: Error404Component }
+];
+
 @NgModule({
-  imports: [ BrowserModule, routing ],
+  imports: [ BrowserModule, RouterModule.forRoot(routes), LuxuryModule ],
   declarations: [
     AppComponent,
     HomeComponent,
