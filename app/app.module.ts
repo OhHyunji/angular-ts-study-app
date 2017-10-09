@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './components/product-detail.component';
 import { ProductDescriptionComponent } from './components/product-description.component';
 import { SellerDetailComponent } from './components/seller-detail.component';
 import { Error404Component } from './components/error404.component';
+import { ChatComponent } from './components/chat.component';
 
 import { LoginGuard } from './guards/login.guard';
 import { UnsavedChangesGuard } from './guards/unsaved_changes.guard';
@@ -24,7 +25,8 @@ import { UnsavedChangesGuard } from './guards/unsaved_changes.guard';
     ProductDetailComponent,
     ProductDescriptionComponent,
     SellerDetailComponent,
-    Error404Component
+    Error404Component,
+    ChatComponent
   ],
   providers: [ { provide: LocationStrategy, useClass: HashLocationStrategy }, LoginGuard, UnsavedChangesGuard ],
   bootstrap: [ AppComponent ]
