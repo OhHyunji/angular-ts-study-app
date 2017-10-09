@@ -5,5 +5,6 @@ import {Component} from '@angular/core';
     template: '<h1 class="product">Product Component</h1>',
     styles: ['.product {background: blue}']
 })
+
 export class ProductComponent {
 }

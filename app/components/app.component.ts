@@ -10,8 +10,9 @@ import {Router} from '@angular/router';
       <router-outlet></router-outlet>
     `
 })
+
 export class AppComponent {
-    constructor(private router : Router) {
+    constructor(private router: Router) {
     }
 
     navigateToProduct() {

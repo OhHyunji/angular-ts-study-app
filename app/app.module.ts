@@ -20,8 +20,9 @@ import {Error404Component} from './components/error404.component';
         ProductDetailComponent,
         Error404Component
     ],
-    providers: [{provide: LocationStrategy, useClass:HashLocationStrategy}],
+    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }
