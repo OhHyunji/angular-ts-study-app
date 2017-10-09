@@ -9,7 +9,7 @@ import {Error404Component} from './components/error404.component';
 export const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'product', component: ProductComponent},
-    {path: 'product/:id', component: ProductDetailComponent},
+    {path: 'product/:id', component: ProductDetailComponent, data: [{isProd: true}]},
     {path: '**', component: Error404Component}
 ];
 

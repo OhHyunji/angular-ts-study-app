@@ -9,8 +9,10 @@ import {ActivatedRoute} from '@angular/router';
 
 export class ProductDetailComponent {
     productId: string;
+    isProd : string;
 
     constructor(route: ActivatedRoute) {
         this.productId = route.snapshot.params['id'];
+        this.isProd = route.snapshot.data[0]['isProd'];
     }
 }
