@@ -18,7 +18,7 @@ import { LuxuryModule } from './components/luxury/luxury.module';
 import { LoginGuard } from './guards/login.guard';
 import { UnsavedChangesGuard } from './guards/unsaved_changes.guard';
 
-const routes : Routes = [
+const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'chat', component: ChatComponent, outlet: 'aux' },
@@ -33,11 +33,16 @@ const routes : Routes = [
       { path: 'seller/:id', component: SellerDetailComponent }
     ]
   },
+  { path: 'luxury', loadChildren: 'app/components/luxury/luxury.lazy.module' },   //지연로딩
   { path: '**', component: Error404Component }
 ];
 
 @NgModule({
-  imports: [ BrowserModule, RouterModule.forRoot(routes), LuxuryModule ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    // LuxuryModule   //즉시로딩
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
